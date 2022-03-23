@@ -20,7 +20,6 @@ namespace ProjetoWeb.Controllers
 
         public IActionResult Index()
         {
-            ViewData["index"] = "CHORANDOOOOO";
             return View();
         }
 
