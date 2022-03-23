@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ProjetoWeb.Models;
 using ProjetoWeb.Data;
+using ProjetoWeb.Services;
 
 namespace ProjetoWeb
 {
@@ -33,6 +34,8 @@ namespace ProjetoWeb
 builder.MigrationsAssembly("ProjetoWeb")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
+            services.AddScoped<SalesRecordService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
