@@ -18,5 +18,11 @@ namespace ProjetoWeb.Services
         {
             return _context.SalesRecord.ToList();
         }
+
+        public void Insert(SalesRecord obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
