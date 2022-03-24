@@ -21,6 +21,7 @@ namespace ProjetoWeb.Services
 
         public void Insert(SalesRecord obj)
         {
+            obj.Seller = _context.Seller.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
