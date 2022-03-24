@@ -5,20 +5,19 @@ using System.Linq;
 
 namespace ProjetoWeb.Services
 {
-    public class SalesRecordService
+    public class DepartmentService
     {
         private readonly ProjetoWebContext _context;
 
-        public SalesRecordService(ProjetoWebContext context)
+        public DepartmentService(ProjetoWebContext context)
         {
             _context = context;
         }
 
-        public List<SalesRecord> FindAll()
+        public List<Department> FindAll()
         {
-            return _context.SalesRecord.ToList();
+            return _context.Department.OrderBy(x=>x.Name).ToList();
         }
-
 
     }
 }
