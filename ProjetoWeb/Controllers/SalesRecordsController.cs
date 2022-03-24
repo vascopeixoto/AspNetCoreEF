@@ -13,20 +13,20 @@ namespace ProjetoWeb.Controllers
 {
     public class SalesRecordsController : Controller
     {
-        private readonly SalesRecordService _salesRecordService;
-        private readonly SellerService _sellerService;
-
-        public SalesRecordsController(SalesRecordService salesRecord, SellerService sellerService)
-        {
-            _salesRecordService = salesRecord;
-            _sellerService = sellerService;
-        }
-
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var list = _salesRecordService.FindAll();
-            return View(list);
+            return View();
+        }
+
+        public IActionResult SimpleSearch()
+        {
+            return View();
+        }
+
+        public IActionResult GroupingSearch()
+        {
+            return View();
         }
 
     }
